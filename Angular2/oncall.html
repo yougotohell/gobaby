@@ -1,0 +1,16 @@
+﻿<div>
+    <TeamSelect (onTeamChange)="onTeamChange($event)"></TeamSelect>
+    <div *ngIf="!isNight">
+        <p>
+            {{team}} oncall is {{team2alias[team]}}
+        </p>
+        <p >---------------3. Above is Angular OnCall (Base class )-------------------------</p>
+
+    </div>
+    <div *ngIf="isNight">
+        <p>
+            {{team}} oncall at night (redmond time) is {{team2alias[team]}}
+        </p>
+        <p >---------------4. Above is Angular NightOnCall (Derived class )-------------------------</p>
+    </div>
+</div>
